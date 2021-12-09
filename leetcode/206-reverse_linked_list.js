@@ -14,6 +14,8 @@
  */
 
 // iteration
+// time complexity: O(n)
+// space complexity: O(1)
 let reverseList = function(head) {
   // edge case
   if (head === null || head.next === null) return head
@@ -31,6 +33,8 @@ let reverseList = function(head) {
 }
 
 // Advance method: recursion
+// time complexity: O(n)
+// space complexity: O(n)
 let reverseListRecursion = function(head) {
   // edge case
   if (head === null || head.next === null) return head

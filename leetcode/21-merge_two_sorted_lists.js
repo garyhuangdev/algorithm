@@ -15,6 +15,8 @@
  */
 
 // iteration
+// time complexity: O(n+m)
+// space complexity: O(1)
 let mergeTwoLists = function(list1, list2) {
   // new a list node as head
   const preHead = new ListNode(-1)
@@ -38,6 +40,8 @@ let mergeTwoLists = function(list1, list2) {
 }
 
 // recursion
+// time complexity: O(n+m)
+// space complexity: O(n+m)
 let mergeTwoListsRecursion = function(list1, list2) {
   // edge cases
   if (list1 == null) return list2

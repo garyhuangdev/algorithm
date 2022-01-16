@@ -11,7 +11,7 @@ In how many distinct ways can you climb to the top?\
 // iteration 1
 // time complexity: O(n)
 // space complexity: O(1)
-var climbStairs = function(n) {
+const climbStairs = function(n) {
   let n1 = 0, n2=0, n3=1
   for (let i = 1; i <= n; i++) {
     [n1, n2, n3] = [n2, n3, n2+n3]
@@ -22,7 +22,7 @@ var climbStairs = function(n) {
 // iteration 2
 // time complexity: O(n)
 // space complexity: O(n)
-var climbStairs = function(n) {
+const climbStairs = function(n) {
   const res = [0, 1, 2]
   for (let i = 3; i <= n; i++) {
     res[i] = res[i-1] + res[i-2]
@@ -34,7 +34,7 @@ var climbStairs = function(n) {
 // recursion
 // time complexity: O(n**2) 严重超标
 // space complexity: O(n)
-var climbStairs = function(n) {
+const climbStairs = function(n) {
   if (n == 0) return 0
   else if (n == 1) return 1
   else if (n == 2) return 2

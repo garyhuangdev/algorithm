@@ -25,18 +25,20 @@
 };
 
 // iteration
-var inorderTraversal1 = function(root) {
+ var inorderTraversal1 = function(root) {
+  const resultList = []
+  const stack = []
+  if (!root) return resultList
+
   let currentNode = root
-  const resultList = [];
-  const stack = [];
-  while (currentNode || stack.length) {
+  while (currentNode || stack.length > 0) {
       while (currentNode) {
-          stack.push(currentNode);
-          currentNode = currentNode.left;
+          stack.push(currentNode)
+          currentNode = currentNode.left
       }
-      currentNode = stack.pop();
-      resultList.push(currentNode.val);
-      currentNode = currentNode.right;
+      currentNode = stack.pop()
+      resultList.push(currentNode.val)
+      currentNode = currentNode.right
   }
-  return resultList;
+  return resultList
 };

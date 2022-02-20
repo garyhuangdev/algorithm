@@ -17,16 +17,18 @@ const preorderTraversal = function(root) {
   if (!root) {
       return resultList
   }
-  recursiveTraversal(root, resultList)
+
+  const recursiveTraversal = (currentNode) => {
+    if (!currentNode) return
+    resultList.push(currentNode.val)
+    recursiveTraversal(currentNode.left)
+    recursiveTraversal(currentNode.right)
+  };
+  
+  recursiveTraversal(root)
   return resultList
 };
 
-const recursiveTraversal = (currentNode, res) => {
-  if (!currentNode) return
-  res.push(currentNode.val)
-  recursiveTraversal(currentNode.left, res)
-  recursiveTraversal(currentNode.right, res)
-};
 
 // iteration
 // use stack to store nodes

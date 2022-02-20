@@ -41,11 +41,9 @@ const preorderTraversal1 = function(root) {
   stack.push(root)
   while (stack.length > 0) {
     const currentNode = stack.pop()
-    if (currentNode) {
-      resultList.push(currentNode.val)
-      if (currentNode.right) stack.push(currentNode.right)
-      if (currentNode.left) stack.push(currentNode.left)
-    }
+    resultList.push(currentNode.val)
+    if (currentNode.right) stack.push(currentNode.right)
+    if (currentNode.left) stack.push(currentNode.left)
   }
   return resultList
 };

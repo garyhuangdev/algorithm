@@ -27,4 +27,4 @@
       resultList.push(tempResult)
   }
   return resultList
-};
+}

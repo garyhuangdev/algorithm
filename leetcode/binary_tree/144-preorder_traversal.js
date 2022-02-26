@@ -23,11 +23,11 @@ const preorderTraversal = function(root) {
     resultList.push(currentNode.val)
     recursiveTraversal(currentNode.left)
     recursiveTraversal(currentNode.right)
-  };
+  }
   
   recursiveTraversal(root)
   return resultList
-};
+}
 
 
 // iteration
@@ -38,6 +38,7 @@ const preorderTraversal1 = function(root) {
   if (!root) {
       return resultList
   }
+
   stack.push(root)
   while (stack.length > 0) {
     const currentNode = stack.pop()
@@ -46,4 +47,4 @@ const preorderTraversal1 = function(root) {
     if (currentNode.left) stack.push(currentNode.left)
   }
   return resultList
-};
+}

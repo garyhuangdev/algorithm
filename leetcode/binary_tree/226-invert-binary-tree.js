@@ -25,20 +25,24 @@
   invertTree(root.right)
 
   return root
-};
+}
 
-// iteration
+// iteration - operate two nodes as a pair
 var invertTree = function(root) {
   if (root == null) return null
   const queue = [root]
   while (queue.length > 0) {
       const currentNode = queue.shift()
       if (!currentNode) continue
+
+      // exchange left and right node
       const temp = currentNode.left
       currentNode.left = currentNode.right
       currentNode.right = temp
+
+      // push left and right node as a pair
       queue.push(currentNode.left)
       queue.push(currentNode.right)
   }
   return root
-};
+}

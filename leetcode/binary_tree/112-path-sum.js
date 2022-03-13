@@ -19,7 +19,7 @@
   // leaf node
   if (!root.left && !root.right) return root.val == targetSum
   return hasPathSum(root.left, targetSum - root.val) || hasPathSum(root.right, targetSum - root.val)
-};
+}
 
 // iteration - 可以选择操作节点的值来保存当前路径的sum 或者 使用一个额外stack来存值
 var hasPathSum = function(root, targetSum) {
@@ -42,5 +42,5 @@ var hasPathSum = function(root, targetSum) {
     }
   }
   return false
-};
+}
 

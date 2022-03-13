@@ -15,11 +15,11 @@
   const inorderMap = new Map()
   inorder.forEach((value, index) => inorderMap.set(value, index))
 
-  return helper(0,inorder.length-1, 0, postorder.length-1)
+  return helper(0, inorder.length-1, 0, postorder.length-1)
 
   function helper(inLeft, inRight, postLeft, postRight){
 
-      if(postLeft>postRight){
+      if (postLeft > postRight) {
           return null
       }
 
@@ -36,4 +36,4 @@
       root.right = helper(rootInorderIndex + 1, inRight, postLeft + numLeft, postRight - 1)
       return root
   }
-};
+}

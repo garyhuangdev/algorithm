@@ -32,7 +32,7 @@ const reverseList = function(head) {
   return resultHead
 }
 
-// Advance method: recursion
+// recursion
 // time complexity: O(n)
 // space complexity: O(n)
 const reverseListRecursion = function(head) {
